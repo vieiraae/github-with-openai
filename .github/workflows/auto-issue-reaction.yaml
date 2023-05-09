@@ -1,4 +1,4 @@
-name: Auto Issue Reaction
+name: Auto Comment Reply
 
 on:
   issue_comment:
