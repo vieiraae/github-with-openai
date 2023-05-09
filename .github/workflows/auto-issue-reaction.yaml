@@ -34,7 +34,7 @@ jobs:
             const res = await axios.post('https://alexvieiopenai.openai.azure.com/openai/deployments/model1/completions?api-version=2022-12-01', json, {
               headers: {
                 'Content-Type': 'application/json',
-                'api-key': ${{ secrets.OPENAI_API_KEY }}
+                'api-key': '${{ secrets.OPENAI_API_KEY }}'
               }
             })
               .catch(err => {
