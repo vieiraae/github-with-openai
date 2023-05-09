@@ -30,6 +30,7 @@ jobs:
               issue_number: context.issue.id,
               content: "+1",
             });            
+                        console.log('Context: ', context);
             const fs = require('fs');
             const axios = require('axios');            
             const prompt = {
