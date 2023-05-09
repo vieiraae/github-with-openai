@@ -27,7 +27,7 @@ jobs:
             github.reactions.createForIssue({
               owner,
               repo,
-              issue_number: context.issue.id,
+              issue_number: context.issue.number,
               content: "+1",
             });            
             const fs = require('fs');
