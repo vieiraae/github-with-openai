@@ -4,7 +4,10 @@ on:
   issue_comment:
     types:
       - created
-
+  issues:
+    types:
+      - created
+      
 jobs:
   comment-issue:
     runs-on: ubuntu-latest
