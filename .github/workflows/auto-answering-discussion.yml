@@ -1,10 +1,10 @@
-name: Auto Answering Discussion
+name: Auto Issue Reply
 
 on:
-  discussion:
+  issues:
     types:
-      - created
-
+      - opened
+      
 jobs:
   comment-issue:
     runs-on: ubuntu-latest
@@ -23,11 +23,11 @@ jobs:
         uses: actions/github-script@v4
         with:
           script: |
-            const {owner, repo} = context.discussion
-            github.reactions.createForIssueComment({
+            const {owner, repo} = context.issue
+            github.reactions.createForIssue({
               owner,
               repo,
-              comment_id: context.payload.comment.id,
+              issue_number: context.issue.id,
               content: "+1",
             });            
             const fs = require('fs');
@@ -54,7 +54,7 @@ jobs:
               });
               
             console.log('Response: ', res);
-            github.discussion.createComment({
+            github.issues.createComment({
               issue_number: context.issue.number,
               owner,
               repo,
