@@ -1,9 +1,6 @@
 name: Auto Comment Reply
 
 on:
-  issue_comment:
-    types:
-      - created
   issues:
     types:
       - opened
