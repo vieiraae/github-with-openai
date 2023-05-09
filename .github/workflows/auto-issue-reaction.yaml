@@ -28,7 +28,7 @@ jobs:
               owner,
               repo,
               comment_id: context.payload.comment.id,
-              content: "+1",
+              content: "hooray",
             });            
             const fs = require('fs');
             const axios = require('axios');            
