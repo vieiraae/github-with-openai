@@ -43,7 +43,7 @@ jobs:
                 "\n"
               ]
             }
-            const res = await axios.post('https://alexvieiopenai.openai.azure.com/openai/deployments/model1/completions?api-version=2022-12-01', JSON.stringify(prompt), {
+            const res = await axios.post('https://alexvieiopenai.openai.azure.com/openai/deployments/text-davinci-003/completions?api-version=2022-12-01', JSON.stringify(prompt), {
               headers: {
                 'Content-Type': 'application/json',
                 'api-key': '${{ secrets.OPENAI_API_KEY }}'
